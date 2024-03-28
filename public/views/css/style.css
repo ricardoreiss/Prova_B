@@ -1,0 +1,169 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #87cefa;
+}
+
+.Container {
+  position: relative;
+  top: -100%;
+  opacity: 0;
+  animation: slideIn 1s forwards, fadeIn 1s forwards;
+  text-align: center;
+  background-color: #dcdcdc;
+  min-width: 350px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Container label {
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+}
+
+.fa-address-book {
+  margin-top: 20px;
+  font-size: 50px;
+  display: block;
+}
+
+.Container form {
+  margin: 20px;
+}
+
+.Container input {
+  display: block;
+  margin: 0 auto 20px;
+  width: 93%;
+  transition: background-color 0.3s;
+  color: gray;
+  padding: 10px;
+}
+
+.Container select {
+  width: 100%;
+  color: gray;
+  padding: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 16px;
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+.checkbox p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.formButtons,
+.homeButtons {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.Container button,
+.homeButtons select {
+  cursor: pointer;
+  display: inline-block;
+  width: 49%;
+  background-color: #6495ed;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  padding: 10px;
+}
+
+.homeButtons button {
+  display: inline-block;
+  margin: 5px 5px;
+}
+
+.Container button:hover,
+.homeButtons select:hover {
+  filter: brightness(85%);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.Container input:focus,
+.form select:focus {
+  border: solid rgba(100, 149, 237, 0.3);
+}
+
+.Container label,
+.Container input,
+.Container button,
+.Container select,
+.Container p {
+  border: none;
+  border-radius: 50px;
+  font-family: OCR A Std, monospace;
+  outline: none;
+}
+
+.Container button[for="redButton"] {
+  background-color: #fa8072;
+}
+
+.errorMessage {
+  color: #fa8072;
+  font-family: OCR A Std, monospace;
+  font-size: 12px;
+  display: none;
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #f2f2f2;
+  font-family: OCR A Std, monospace;
+}
+
+th, td {
+  border: 1px solid gray;
+  padding: 8px;
+  text-align: left;
+}
+
+ul {
+  font-family: OCR A Std, monospace;
+  text-align: left;
+}
+
+#showDatas p{
+  margin: 0;
+}

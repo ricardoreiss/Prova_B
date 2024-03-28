@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>SignUp</title>
+
+        <link rel="stylesheet" type="text/css" href="/views/css/style.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/jsonwebtoken@8.5.1"></script>
+    </head>
+    <body>
+
+        <div class="Container">
+            <label>Registro</label>
+            <hr>
+
+            <form id="personalInfoForm">
+                <input type="text" id="name" placeholder="Nome" pattern="[A-Za-z]+" title="Insira apenas letras no nome" autofocus required>
+                <input type="text" id="surname" placeholder="Sobrenome" pattern="[A-Za-z]+" title="Insira apenas letras no sobrenome">
+                <input type="text" id="telephone" placeholder="Telefone" maxlength="15" pattern=".{15}" title="Preencha o Telefone corretamente (XX) XXXXX-XXXX" required>
+                <select id="gender" required>
+                    <option value="" disabled selected style="display:none;">Gênero</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select>
+                
+                <div class="formButtons">
+                    <button type="submit">Próximo</button>
+                </div>
+            </form>
+        </div>
+
+    </body>
+    <script src="/views/scripts/personalInfoScript.js"></script>;
+
+</html>

@@ -6,24 +6,26 @@
 
         <title>Home</title>
 
-        <link rel="stylesheet" type="text/css" href="../../view.css"/>
+        <link rel="stylesheet" href="/views/css/style.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
     <body>
 
         <div class="Container">
-            <label>Olá, *name*</label>
+            <label>Olá, <labe id="userName"></labe></label>
             <hr>
 
             <i class="fa fa-address-book" aria-hidden="true"></i>
                 
             <div class="homeButtons">
-                <button>Meus Dados</button>
-                <button id="redButton" >Sair</button>
+                <button id="toDatas">Meus Dados</button>
+                <button for="redButton" id="signOutButton">Sair</button>
             </div>
 
         </div>
 
     </body>
+    <script src="/views/scripts/homeScript.js"></script>;
 
 </html>

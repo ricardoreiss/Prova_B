@@ -4,18 +4,20 @@
     <head>
         <meta charset="UTF-8">
 
-        <title>SignUp</title>
+        <title>EditDatas</title>
 
-        <link rel="stylesheet" type="text/css" href="../../view.css"/>
+        <link rel="stylesheet" type="text/css" href="/views/css/style.css"/>
     </head>
     <body>
 
         <div class="Container">
-            <label>Registro</label>
+            <label>Editar Dados</label>
             <hr>
 
+            <p>email@example.com.br</p>
+            
             <form>
-                <input type="text" class="name" placeholder="Nome" autofocus>
+                <input type="text" class="name" placeholder="Nome">
                 <input type="text" class="surname" placeholder="Sobrenome">
                 <input type="text" class="telephone" placeholder="Telefone">
                 <select class="gender">
@@ -26,7 +28,8 @@
                 </select>
                 
                 <div class="formButtons">
-                    <button>Próximo</button>
+                    <button for="redButton" >Cancelar</button>
+                    <button>Salvar</button>
                 </div>
             </form>
         </div>
