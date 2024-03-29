@@ -7,7 +7,7 @@ Este é o README para o projeto Prova_B.
 1. **Clonar o repositório:**
    - Clone este repositório para o seu computador local usando o comando:
      ```
-     git clone https://github.com/seu-usuario/Prova_B.git
+     git clone https://github.com/ricardoreiss/Prova_B.git
      ```
 
 2. **Criar um banco de dados:**
