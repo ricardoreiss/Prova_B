@@ -13,7 +13,6 @@ async function getDatas() {
       userEmailComponent.textContent = userDatas.email;
     } else window.location.href = "/login";
   } catch (e) {
-    console.log(e);
     alert("Tivemos um problema. Volte mais tarde. :(");
   }
 }
@@ -66,28 +65,33 @@ document
       const token = localStorage.getItem("authToken");
 
       try {
-        const response = await fetch(`/model/datas?token=${token}`, {
-          method: "GET",
-        });
 
-        if (response.status === 200) {
           const requestBody = JSON.stringify({currentPassword, newPassword});
 
           const response = await fetch("/model/editdatas", {
             method: "PATCH",
             headers: {
+              'Content-Type': 'application/json',
               Authorization: `Bearer ${token}`,
             },
-            body: JSON.stringify(requestBody)
+            body: requestBody
           });
 
+          const passwordError = document.getElementById('passwordError');
           if (response.status === 200) {
+            passwordError.style.display = 'none';
+
             alert("Senha Trocada.");
+            const responseBody = await response.json();
+            const token = responseBody.token;
+
+            localStorage.setItem("authToken", token);
+
             window.location.href = "/home/datas";
-          }
-        } else window.location.href = "/login";
+          } else if (response.status === 401) {
+            passwordError.style.display = 'block';
+          } else window.location.href = "/login";
       } catch (e) {
-        console.log(e);
         alert("Tivemos um problema. Volte mais tarde :(");
       }
     }

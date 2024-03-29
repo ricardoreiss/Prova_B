@@ -43,7 +43,6 @@ document
     });
 
     try {
-      console.log(requestBody);
       const response = await fetch("/model/signup", {
         method: "POST",
         headers: {
@@ -65,7 +64,6 @@ document
       }
 
     } catch (e) {
-      console.log(e);
       alert("Tivemos um problema. Volte mais tarde. :(")
     }
   });

@@ -1,4 +1,4 @@
-const User = require("../models/userMOdel");
+const User = require("../models/userModel");
 const jwt = require("jsonwebtoken");
 
 async function DatasModelRoute(req, res) {
@@ -28,7 +28,6 @@ async function DatasModelRoute(req, res) {
     
     return res.status(401).json({ error: "Invalid Token." });
   } catch (error) {
-    console.error(error);
     throw res.status(500).json({ error: "Intern Sevice Error" });
   }
 }

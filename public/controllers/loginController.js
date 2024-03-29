@@ -1,4 +1,4 @@
-const User = require("../models/userMOdel");
+const User = require("../models/userModel");
 const crypto = require("crypto");
 const jwt = require("jsonwebtoken");
 
@@ -27,7 +27,6 @@ async function LoginModelRoute(req, res) {
 
     return res.status(401).json({ error: "Incorrect Password." });
   } catch (error) {
-    console.error(error);
     throw res.status(500).json({ error: "Intern Sevice Error" });
   }
 }

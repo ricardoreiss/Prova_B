@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
-        <title>Datas</title>
+    <title>Datas</title>
 
-        <link rel="stylesheet" type="text/css" href="/views/css/style.css"/>
-    </head>
-    <body>
+    <link rel="stylesheet" type="text/css" href="/views/css/style.css" />
+  </head>
+  <body>
+    <div class="Container">
+      <label>Meus Dados</label>
+      <hr />
 
-        <div class="Container">
-            <label>Meus Dados</label>
-            <hr>
+      <div id="showDatas"></div>
 
-            <div id="showDatas"></div>
-                
-            <div class="homeButtons">
-                <select class="gender" id="showType">
-                    <option value="Lista">Lista</option>
-                    <option value="Tabela">Tabela</option>
-                    <option value="Tópicos">Tópicos</option>
-                </select>
-                <hr>
-                <button id="toEditDatas">Editar</button>
-                <button id="toChangePassword">Trocar Senha</button>
-                <button for="redButton" id="deleteAccount">Deletar Conta</button>
-            </div>
-
+      <div class="homeButtons">
+        <select class="gender" id="showType">
+          <option value="Lista">Lista</option>
+          <option value="Tabela">Tabela</option>
+          <option value="Tópicos">Tópicos</option>
+        </select>
+        <hr />
+        <div class="inlineButtons">
+          <button id="toEditDatas">Editar</button>
+          <button id="toChangePassword">Trocar Senha</button>
         </div>
-
-    </body>
-    <script src="/views/scripts/datasScript.js"></script>;
-
+        <div class="inlineButtons">
+            <button id="toHome">Home</button>
+          <button for="redButton" id="deleteAccount">Deletar Conta</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/views/scripts/datasScript.js"></script>
+  ;
 </html>

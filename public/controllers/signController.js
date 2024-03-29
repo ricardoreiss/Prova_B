@@ -1,4 +1,4 @@
-const User = require("../models/userMOdel");
+const User = require("../models/userModel");
 const crypto = require("crypto");
 
 async function SignModelRoute(req, res) {
@@ -21,10 +21,8 @@ async function SignModelRoute(req, res) {
       password: hashed_password,
     });
 
-    console.log(newUser);
     return res.status(200).json({ message: "User Created." });
   } catch (error) {
-    console.error(error);
     throw res.status(500).json({ error: "Intern Sevice Error" });
   }
 }

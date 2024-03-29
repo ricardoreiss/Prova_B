@@ -27,7 +27,6 @@ document
     });
 
     try {
-      console.log(requestBody);
       const response = await fetch("/model/login", {
         method: "POST",
         headers: {
@@ -52,16 +51,13 @@ document
         emailAndPasswordError.style.display = "none";
 
         const responseBody = await response.json();
-        console.log(responseBody);
         const token = responseBody.token;
     
         localStorage.setItem("authToken", token);
 
-        localStorage.setItem("login", JSON.stringify({}));
         window.location.href = "/home";
       }
     } catch (e) {
-      console.log(e);
       alert("Tivemos um problema. Volte mais tarde. :(");
     }
   });

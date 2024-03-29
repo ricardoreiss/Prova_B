@@ -14,10 +14,10 @@ document.getElementById("personalInfoForm").addEventListener("submit", async fun
     event.preventDefault();
 
     const personalinformations = {
-        name: document.querySelector('#name').value,
-        surname: document.querySelector('#surname').value,
-        telephone: document.querySelector('#telephone').value,
-        gender: document.querySelector('#gender').value,
+        name: document.getElementById("name").value,
+        surname: document.getElementById("surname").value,
+        telephone: document.getElementById("telephone").value,
+        gender: document.getElementById("gender").value,
     }
 
     localStorage.setItem('personalInformations', JSON.stringify(personalinformations))

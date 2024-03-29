@@ -93,6 +93,10 @@ html {
   text-align: center;
 }
 
+.inlineButtons {
+  display: flex;
+}
+
 .Container button,
 .homeButtons select {
   cursor: pointer;

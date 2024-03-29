@@ -11,7 +11,6 @@ async function getDatas() {
       return userDatas;
     } else window.location.href = "/login";
   } catch (e) {
-    console.log(e);
     alert("Tivemos um problema. Volte mais tarde. :(");
   }
 }
@@ -84,7 +83,7 @@ document
   .getElementById("toEditDatas")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    window.location.href = "/home/datas/editdatas";
+    window.location.href = "/home/datas/edit";
   });
 
 document
@@ -92,6 +91,13 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     window.location.href = "/home/datas/changepassword";
+  });
+
+document
+  .getElementById("toHome")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "/home";
   });
 
 document
@@ -126,7 +132,6 @@ document
           }
         } else window.location.href = "/login";
       } catch (e) {
-        console.log(e);
         alert("Tivemos um problema. Volte mais tarde :(");
       }
     }

@@ -13,7 +13,6 @@ async function getDatas() {
       userNameComponent.textContent = userDatas.name;
     } else window.location.href = "/login";
   } catch (e) {
-    console.log(e);
     alert("Tivemos um problema. Volte mais tarde. :(");
   }
 }
