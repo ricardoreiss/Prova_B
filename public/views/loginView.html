@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
-        <title>Login</title>
+    <title>Login</title>
 
-        <link rel="stylesheet" type="text/css" href="/views/css/style.css"/>
-    </head>
-    <body>
+    <link rel="stylesheet" type="text/css" href="/views/css/style.css" />
+  </head>
+  <body>
+    <div class="Container">
+      <label>Entrar</label>
+      <hr />
 
-        <div class="Container">
-            <label>Entrar</label>
-            <hr>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" autofocus required />
+        <input
+          type="password"
+          id="password"
+          placeholder="Senha"
+          minlength="6"
+          required
+        />
 
-            <form id="loginForm">
-                <input type="email" id="email" placeholder="Email" autofocus required>
-                <input type="password" id="password" placeholder="Senha" minlength="6" required>
+        <span id="emailAndPasswordError" class="errorMessage"></span>
 
-                <span id="emailAndPasswordError" class="errorMessage"></span>
-                
-                <div class="formButtons">
-                    <button type="button" id="signUpButton">Criar Conta</button>
-                    <button type="submit" id="submitButton">Vamos</button>
-                </div>
-            </form>
+        <div class="formButtons">
+          <button type="button" id="signUpButton">Criar Conta</button>
+          <button type="submit" id="submitButton">Vamos</button>
         </div>
-
-    </body>
-    <script src="/views/scripts/loginScript.js"></script>;
-
+      </form>
+    </div>
+  </body>
+  <script src="/views/scripts/loginScript.js"></script>
 </html>

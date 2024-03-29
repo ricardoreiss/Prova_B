@@ -51,38 +51,35 @@ document
   .addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const confirmSave = confirm(
-        "Salvar Modificações?"
-      );
-  
-      if (confirmSave) {
-        const token = localStorage.getItem("authToken");
-  
-        try {
-  
-            const requestBody = JSON.stringify({
-                name: document.getElementById("name").value,
-                surname: document.getElementById("surname").value,
-                telephone: document.getElementById("telephone").value,
-                gender: document.getElementById("gender").value,
-            });
-  
-            const response = await fetch("/model/editdatas", {
-              method: "PATCH",
-              headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${token}`,
-              },
-              body: requestBody
-            });
-  
-            if (response.status === 200) {
-              alert("Dados Modificados.");
+    const confirmSave = confirm("Salvar Modificações?");
 
-              window.location.href = "/home/datas";
-            } else window.location.href = "/login";
-        } catch (e) {
-          alert("Tivemos um problema. Volte mais tarde :(");
-        }
+    if (confirmSave) {
+      const token = localStorage.getItem("authToken");
+
+      try {
+        const requestBody = JSON.stringify({
+          name: document.getElementById("name").value,
+          surname: document.getElementById("surname").value,
+          telephone: document.getElementById("telephone").value,
+          gender: document.getElementById("gender").value,
+        });
+
+        const response = await fetch("/model/editdatas", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: requestBody,
+        });
+
+        if (response.status === 200) {
+          alert("Dados Modificados.");
+
+          window.location.href = "/home/datas";
+        } else window.location.href = "/login";
+      } catch (e) {
+        alert("Tivemos um problema. Volte mais tarde :(");
       }
+    }
   });

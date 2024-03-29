@@ -1,4 +1,5 @@
-if (!localStorage.getItem('personalInformations')) window.location.href = '/signup/personalinformations'
+if (!localStorage.getItem("personalInformations"))
+  window.location.href = "/signup/personalinformations";
 
 document.getElementById("password").addEventListener("input", function () {
   const password = this.value;
@@ -51,19 +52,18 @@ document
         body: requestBody,
       });
 
-      const emailError = document.getElementById('emailError');
+      const emailError = document.getElementById("emailError");
       if (response.status === 422) {
-        emailError.style.display = 'block';
+        emailError.style.display = "block";
       } else if (response.status === 200) {
-        emailError.style.display = 'none';
+        emailError.style.display = "none";
 
-        localStorage.setItem('personalInformations', '');
-        alert("Conta criada com Sucesso! :)")
+        localStorage.setItem("personalInformations", "");
+        alert("Conta criada com Sucesso! :)");
 
         window.location.href = "/login";
       }
-
     } catch (e) {
-      alert("Tivemos um problema. Volte mais tarde. :(")
+      alert("Tivemos um problema. Volte mais tarde. :(");
     }
   });

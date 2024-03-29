@@ -157,7 +157,8 @@ table {
   font-family: OCR A Std, monospace;
 }
 
-th, td {
+th,
+td {
   border: 1px solid gray;
   padding: 8px;
   text-align: left;
@@ -168,6 +169,6 @@ ul {
   text-align: left;
 }
 
-#showDatas p{
+#showDatas p {
   margin: 0;
 }

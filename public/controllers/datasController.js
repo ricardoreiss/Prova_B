@@ -15,17 +15,17 @@ async function DatasModelRoute(req, res) {
 
       if (user && user.password === password) {
         const userDatas = {
-            email: user.email,
-            name: user.name,
-            surname: user.surname,
-            telephone: user.telephone,
-            gender: user.gender
-        }
+          email: user.email,
+          name: user.name,
+          surname: user.surname,
+          telephone: user.telephone,
+          gender: user.gender,
+        };
 
         return res.status(200).json(userDatas);
-      } 
-    } 
-    
+      }
+    }
+
     return res.status(401).json({ error: "Invalid Token." });
   } catch (error) {
     throw res.status(500).json({ error: "Intern Sevice Error" });

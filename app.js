@@ -24,7 +24,7 @@ app.get('/home', HomeRoute);
 app.get('/home/datas', DatasRoute);
 app.get('/home/datas/edit', EditDatasRoute);
 app.get('/home/datas/changepassword', ChangePasswordRoute);
-app.get('*', NotFoundRoute)
+
 
 app.use(bodyParser.json());
 

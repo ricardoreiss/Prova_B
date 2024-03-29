@@ -27,9 +27,7 @@ document
     window.location.href = "/login";
   });
 
-document
-  .getElementById("toDatas")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    window.location.href = "home/datas";
-  });
+document.getElementById("toDatas").addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = "home/datas";
+});

@@ -93,12 +93,10 @@ document
     window.location.href = "/home/datas/changepassword";
   });
 
-document
-  .getElementById("toHome")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    window.location.href = "/home";
-  });
+document.getElementById("toHome").addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = "/home";
+});
 
 document
   .getElementById("deleteAccount")

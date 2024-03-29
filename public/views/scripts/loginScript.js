@@ -1,9 +1,9 @@
 function checkSubmit(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    if (event.key === "Enter") {
-        document.getElementById("submitButton").click(); // Dispara o evento de clique no botão de envio
-    }
+  if (event.key === "Enter") {
+    document.getElementById("submitButton").click(); // Dispara o evento de clique no botão de envio
+  }
 }
 
 document
@@ -42,17 +42,15 @@ document
         emailAndPasswordError.textContent =
           "Email não registrado. Crie uma conta.";
         emailAndPasswordError.style.display = "block";
-
       } else if (response.status === 401) {
         emailAndPasswordError.textContent = "Senha Incorreta. Tente Novamente.";
         emailAndPasswordError.style.display = "block";
-
       } else if (response.status === 200) {
         emailAndPasswordError.style.display = "none";
 
         const responseBody = await response.json();
         const token = responseBody.token;
-    
+
         localStorage.setItem("authToken", token);
 
         window.location.href = "/home";

@@ -30,7 +30,7 @@ document.getElementById("newPassword").addEventListener("input", function () {
 document.getElementById("showPassword").addEventListener("change", function () {
   const currentPassword = document.getElementById("currentPassword");
   const newPassword = document.getElementById("newPassword");
-  const confirmNewPassword = document.getElementById("confirmNewPassword"); 
+  const confirmNewPassword = document.getElementById("confirmNewPassword");
   if (this.checked) {
     currentPassword.type = "text";
     newPassword.type = "text";
@@ -57,40 +57,37 @@ document
     const currentPassword = document.getElementById("currentPassword").value;
     const newPassword = document.getElementById("newPassword").value;
 
-    const confirmSave = confirm(
-      "Salvar Modificações?"
-    );
+    const confirmSave = confirm("Salvar Modificações?");
 
     if (confirmSave) {
       const token = localStorage.getItem("authToken");
 
       try {
+        const requestBody = JSON.stringify({ currentPassword, newPassword });
 
-          const requestBody = JSON.stringify({currentPassword, newPassword});
+        const response = await fetch("/model/editdatas", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: requestBody,
+        });
 
-          const response = await fetch("/model/editdatas", {
-            method: "PATCH",
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${token}`,
-            },
-            body: requestBody
-          });
+        const passwordError = document.getElementById("passwordError");
+        if (response.status === 200) {
+          passwordError.style.display = "none";
 
-          const passwordError = document.getElementById('passwordError');
-          if (response.status === 200) {
-            passwordError.style.display = 'none';
+          alert("Senha Trocada.");
+          const responseBody = await response.json();
+          const token = responseBody.token;
 
-            alert("Senha Trocada.");
-            const responseBody = await response.json();
-            const token = responseBody.token;
+          localStorage.setItem("authToken", token);
 
-            localStorage.setItem("authToken", token);
-
-            window.location.href = "/home/datas";
-          } else if (response.status === 401) {
-            passwordError.style.display = 'block';
-          } else window.location.href = "/login";
+          window.location.href = "/home/datas";
+        } else if (response.status === 401) {
+          passwordError.style.display = "block";
+        } else window.location.href = "/login";
       } catch (e) {
         alert("Tivemos um problema. Volte mais tarde :(");
       }

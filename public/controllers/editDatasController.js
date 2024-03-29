@@ -24,15 +24,12 @@ async function EditDatasModelRoute(req, res) {
             req.body.newPassword === undefined
           ) {
             for (const key in req.body) {
-                user[key] = req.body[key];
-              }
+              user[key] = req.body[key];
+            }
 
             await user.save();
 
-            return res
-            .status(200)
-            .json({ message: "Datas Modified." });
-
+            return res.status(200).json({ message: "Datas Modified." });
           } else {
             const { currentPassword, newPassword } = req.body;
 

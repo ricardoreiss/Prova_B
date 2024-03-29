@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
-        <title>Home</title>
+    <title>Home</title>
 
-        <link rel="stylesheet" href="/views/css/style.css">
+    <link rel="stylesheet" href="/views/css/style.css" />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    </head>
-    <body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="Container">
+      <label>Olá, <labe id="userName"></labe></label>
+      <hr />
 
-        <div class="Container">
-            <label>Olá, <labe id="userName"></labe></label>
-            <hr>
+      <i class="fa fa-address-book" aria-hidden="true"></i>
 
-            <i class="fa fa-address-book" aria-hidden="true"></i>
-                
-            <div class="homeButtons">
-                <button id="toDatas">Meus Dados</button>
-                <button for="redButton" id="signOutButton">Sair</button>
-            </div>
-
-        </div>
-
-    </body>
-    <script src="/views/scripts/homeScript.js"></script>;
-
+      <div class="homeButtons">
+        <button id="toDatas">Meus Dados</button>
+        <button for="redButton" id="signOutButton">Sair</button>
+      </div>
+    </div>
+  </body>
+  <script src="/views/scripts/homeScript.js"></script>
 </html>

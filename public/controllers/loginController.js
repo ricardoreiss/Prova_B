@@ -18,9 +18,13 @@ async function LoginModelRoute(req, res) {
     if (!user) {
       return res.status(404).json({ error: "User not exists." });
     } else if (user.password === hashed_password) {
-      const token = jwt.sign({ email: user.email, password: user.password }, SECRET_KEY, {
-        expiresIn: "1h",
-      });
+      const token = jwt.sign(
+        { email: user.email, password: user.password },
+        SECRET_KEY,
+        {
+          expiresIn: "1h",
+        }
+      );
 
       return res.status(200).json({ message: "User Login.", token: token });
     }
