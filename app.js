@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const { PersonalInfoRoute, CredentialsRoute, LoginRoute, HomeRoute, DatasRoute, EditDatasRoute, ChangePasswordRoute } = require('./viewRoutes.js');
+const { PersonalInfoRoute, CredentialsRoute, LoginRoute, HomeRoute, DatasRoute, EditDatasRoute, ChangePasswordRoute, NotFoundRoute } = require('./viewRoutes.js');
 const SignModelRoute = require('./public/controllers/SignController.js');
 const LoginModelRoute = require('./public/controllers/loginController.js');
 const DatasModelRoute = require('./public/controllers/datasController.js');
@@ -24,6 +24,7 @@ app.get('/home', HomeRoute);
 app.get('/home/datas', DatasRoute);
 app.get('/home/datas/edit', EditDatasRoute);
 app.get('/home/datas/changepassword', ChangePasswordRoute);
+app.get('*', NotFoundRoute)
 
 app.use(bodyParser.json());
 

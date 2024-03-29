@@ -25,8 +25,16 @@ function EditDatasRoute(req, res) {
 }
 
 function ChangePasswordRoute(req, res) {
-    res.sendFile(path.resolve(__dirname, "./public/views/changePasswordView.html"));
-  }
+  res.sendFile(
+    path.resolve(__dirname, "./public/views/changePasswordView.html")
+  );
+}
+
+function NotFoundRoute(req, res) {
+  res.sendFile(
+    path.resolve(__dirname, "./public/views/notFoundView.html")
+  );
+}
 
 module.exports = {
   PersonalInfoRoute,
@@ -36,4 +44,5 @@ module.exports = {
   DatasRoute,
   EditDatasRoute,
   ChangePasswordRoute,
+  NotFoundRoute
 };
