@@ -26,7 +26,7 @@ Este é o README para o projeto Prova_B.
    - Certifique-se de ter o Node.js instalado em seu sistema.
    - Instale as dependências do projeto executando o seguinte comando no terminal, dentro do diretório do projeto:
      ```
-     npm install express dotenv path body-parser jsonwebtoken crypto
+     npm install express dotenv path body-parser jsonwebtoken crypto sequelize
      ```
 
 5. **Rodar o servidor:**
