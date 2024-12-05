@@ -7,7 +7,7 @@ Auth JWT MVC is a project designed for studying web authentication with JWT. It 
 1. **Clone the repository:**
    - Clone this repository to your local computer using the command:
      ```
-     git clone https://github.com/ricardoreiss/Auth-JWT_MVC.git
+     git clone https://github.com/ricardoreiss/Auth-JWT-MVC.git
      ```
 
 2. **Create a database:**
