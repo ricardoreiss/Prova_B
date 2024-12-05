@@ -23,7 +23,7 @@ async function SignModelRoute(req, res) {
 
     return res.status(200).json({ message: "User Created." });
   } catch (error) {
-    throw res.status(500).json({ error: "Intern Sevice Error" });
+    throw res.status(500).json({ error: "Internal Service Error" });
   }
 }
 

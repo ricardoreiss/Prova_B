@@ -4,18 +4,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const { PersonalInfoRoute, CredentialsRoute, LoginRoute, HomeRoute, DatasRoute, EditDatasRoute, ChangePasswordRoute, NotFoundRoute } = require('./viewRoutes.js');
-const SignModelRoute = require('./public/controllers/SignController.js');
-const LoginModelRoute = require('./public/controllers/loginController.js');
-const DatasModelRoute = require('./public/controllers/datasController.js');
-const DeleteUserModelRoute = require('./public/controllers/deleteUserController.js');
-const EditDatasModelRoute = require('./public/controllers/editDatasController.js');
+const { PersonalInfoRoute, CredentialsRoute, LoginRoute, HomeRoute, DatasRoute, EditDatasRoute, ChangePasswordRoute, NotFoundRoute } = require('./src/views/index.js');
+const SignModelRoute = require('./src/controllers/signController.js');
+const LoginModelRoute = require('./src/controllers/loginController.js');
+const DatasModelRoute = require('./src/controllers/datasController.js');
+const DeleteUserModelRoute = require('./src/controllers/deleteUserController.js');
+const EditDatasModelRoute = require('./src/controllers/editDatasController.js');
 
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 app.get('/signup/personalinformations', PersonalInfoRoute);
 app.get('/signup/credentials', CredentialsRoute);
