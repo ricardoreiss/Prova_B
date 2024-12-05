@@ -1,44 +1,45 @@
-## Prova_B
+## Auth MVC
 
-Este é o README para o projeto Prova_B.
+Auth MVC is a project designed for studying web authentication with JWT. It uses only HTML, CSS, and JavaScript, leveraging packages like Express, Sequelize, and Jsonwebtoken.
 
-### Passos para rodar o projeto:
+### Steps to run the project:
 
-1. **Clonar o repositório:**
-   - Clone este repositório para o seu computador local usando o comando:
+1. **Clone the repository:**
+   - Clone this repository to your local computer using the command:
      ```
      git clone https://github.com/ricardoreiss/Prova_B.git
      ```
 
-2. **Criar um banco de dados:**
-   - Crie um banco de dados MySQL com o nome desejado.
+2. **Create a database:**
+   - Create a MySQL database with your desired name.
 
-3. **Configurar as variáveis de ambiente:**
-   - Crie um arquivo `.env` no diretório raiz do projeto e insira as seguintes variáveis de ambiente, substituindo os valores pelos dados do seu banco de dados MySQL:
+3. **Set up environment variables:**
+   - Create a `.env` file in the root directory of the project and insert the following environment variables, replacing the values with your MySQL database details:
      ```
-     MODEL_DATABASE=seu_nome_de_banco_de_dados
-     MODEL_USERNAME=seu_usuario_mysql
-     MODEL_PASSWORD=sua_senha_mysql
+     MODEL_DATABASE=your_database_name
+     MODEL_USERNAME=your_mysql_username
+     MODEL_PASSWORD=your_mysql_password
      SECRET_KEY=r1c4rd0
      ```
 
-4. **Instalar as dependências do projeto:**
-   - Certifique-se de ter o Node.js instalado em seu sistema.
-   - Instale as dependências do projeto executando o seguinte comando no terminal, dentro do diretório do projeto:
+4. **Install project dependencies:**
+   - Make sure you have Node.js installed on your system.
+   - Install the project dependencies by running the following command in the terminal, inside the project directory:
      ```
      npm install express dotenv path body-parser jsonwebtoken crypto sequelize
      ```
 
-5. **Rodar o servidor:**
-   - Execute o seguinte comando para iniciar o servidor:
+5. **Run the server:**
+   - Execute the following command to start the server:
      ```
      node app.js
      ```
 
-6. **Acessar a aplicação:**
-   - Abra um navegador da web e navegue até [http://localhost:3000/home](http://localhost:3000/home) para acessar a aplicação.
+6. **Access the application:**
+   - Open a web browser and navigate to [http://localhost:3000/home](http://localhost:3000/home) to access the application.
 
-### Nota:
-- Certifique-se de ter o MySQL instalado em seu sistema e de ter criado o banco de dados conforme mencionado no passo 2.
-- As variáveis de ambiente no arquivo `.env` devem corresponder aos detalhes do seu ambiente MySQL.
-- Se necessário, ajuste as configurações do servidor express no arquivo `app.js` para atender às suas necessidades específicas.
+### Note:
+- Make sure you have MySQL installed on your system and have created the database as mentioned in step 2.
+- The environment variables in the `.env` file must match the details of your MySQL environment.
+- If necessary, adjust the express server settings in the `app.js` file to meet your specific needs.
+
