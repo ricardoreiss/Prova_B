@@ -1,6 +1,6 @@
 ## Auth MVC
 
-Auth MVC is a project designed for studying web authentication with JWT. It uses only HTML, CSS, and JavaScript, leveraging packages like Express, Sequelize, and Jsonwebtoken.
+Auth MVC is a project designed for studying web authentication with JWT. It uses only HTML, CSS, SQL and JavaScript, leveraging packages like Express, Sequelize, and Jsonwebtoken.
 
 ### Steps to run the project:
 
